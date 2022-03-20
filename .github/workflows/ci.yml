@@ -12,23 +12,22 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Change directory
-      run: |
-        cd ./webapp
-        ls -l
-
     - name: Setup Node.js
+      working-directory: ./webapp
       uses: actions/setup-node@v2
       with:
         node-version: '16'
 
     - name: Install dependencies
+      working-directory: ./webapp
       run: npm install
 
     - name: Build
+      working-directory: ./webapp
       run: npm run build -- --configuration=production --base-href=/gru/
 
     - name: Deploy
+      working-directory: ./webapp
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
