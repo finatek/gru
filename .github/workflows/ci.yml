@@ -16,7 +16,6 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '16'
-        working-directory: ./webapp
 
     - name: Install dependencies
       working-directory: ./webapp
@@ -29,6 +28,5 @@ jobs:
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
-        working-directory: ./webapp
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist/webapp
+        publish_dir: ./webapp/dist/webapp
