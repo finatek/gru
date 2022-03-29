@@ -1,0 +1,11 @@
+@import '~@nebular/theme/styles/globals';
+@import '~@nebular/theme/styles/global/breakpoints';
+
+@import 'themes/themes';
+@import 'themes/light';
+
+@include nb-install() {
+  @include nb-theme-global();
+};
+
+@import 'layouts/app-layout';

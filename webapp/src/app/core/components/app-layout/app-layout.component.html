@@ -1,0 +1,89 @@
+<nb-layout class="app-layout">
+
+  <nb-layout-header subheader class="header">
+    <div class="header-item logo-container">
+      <span>Gru</span>
+    </div>
+    <div class="header-item spacer"></div>
+    <div
+      class="header-item sidebar-toggle-button"
+    >
+      <button
+        nbButton
+        ghost
+        status="primary"
+        shape="round"
+        (click)="toggleSidebar()"
+      >
+        <nb-icon icon="menu-outline"></nb-icon>
+      </button>
+    </div>
+  </nb-layout-header>
+
+  <nb-sidebar
+    class="sidebar"
+    end
+    fixed
+    [tag]="sidebarTag"
+    [state]="'collapsed'"
+  >
+    <div class="sidebar-control-container">
+      <button
+        nbButton
+        ghost
+        status="primary"
+        shape="round"
+        (click)="toggleSidebar()"
+      >
+        <nb-icon icon="close-outline"></nb-icon>
+      </button>
+    </div>
+    <nb-menu
+      class="sidebar-menu"
+      [items]="sidebarMenuItems"
+    ></nb-menu>
+  </nb-sidebar>
+
+  <nb-layout-column class="column side-column start">
+    <nb-menu
+      class="sidebar-menu"
+      [items]="sidebarMenuItems"
+    ></nb-menu>
+  </nb-layout-column>
+  <nb-layout-column class="column main-column">
+    <div class="main-content">
+      <h2>Main content</h2>
+      <p>
+        Fugiat in dolore est officia sit. Amet ad ullamco enim in do minim nulla ea enim eu voluptate reprehenderit cupidatat
+        voluptate. Consectetur elit quis nostrud enim officia adipisicing aute exercitation. Mollit nostrud aute laborum sint
+        esse et aliquip occaecat cupidatat mollit nisi nostrud culpa magna. Proident reprehenderit in ut sunt occaecat sit.
+        Consequat tempor qui Lorem anim aute culpa eiusmod. Tempor esse velit ex consectetur. Excepteur incididunt et proident
+        ut eu proident nulla sunt.
+        Et deserunt magna enim fugiat ad eiusmod eu consequat excepteur occaecat. Proident laborum sunt aute id nulla velit in
+        nisi culpa laboris pariatur ullamco pariatur. Et in non Lorem et aute aliquip non elit voluptate dolore sint enim
+        exercitation id. Quis laboris fugiat sit occaecat ad et aliquip excepteur nulla sit laboris mollit consequat aliquip.
+        Exercitation cupidatat tempor adipisicing exercitation fugiat aute qui nostrud.
+        Culpa est Lorem quis elit pariatur ea aliqua nostrud mollit laboris do Lorem in. Nisi magna consequat velit aliquip
+        exercitation dolor duis aliquip ut mollit minim pariatur ullamco. Veniam ipsum nulla id duis consectetur. Commodo
+        aliquip consequat sunt id consequat duis Lorem aute nisi officia minim dolor. Nulla culpa culpa incididunt ad ex
+        cillum. Nulla anim quis esse proident ullamco nisi occaecat exercitation mollit. Qui nulla do ut pariatur ullamco ut
+        pariatur dolor laboris commodo excepteur Lorem nostrud.
+        Dolor anim amet non amet cillum. Do mollit sit elit ex nulla qui. Voluptate sit laboris nostrud anim. Amet est culpa
+        ut ea ad amet. Ad proident amet aute magna eiusmod quis Lorem elit. Officia non duis laboris enim quis ad ea qui
+        deserunt minim qui. Commodo duis aliqua consectetur consequat eiusmod aliqua fugiat adipisicing.
+        Est ea cillum aliquip quis eiusmod commodo ipsum est commodo pariatur occaecat quis. Sint dolor culpa qui nostrud id
+        officia dolor consectetur ex. Tempor sint aliqua consectetur ipsum nisi. Dolore incididunt eu commodo amet ea sunt
+        cupidatat minim anim nulla sunt. Voluptate Lorem excepteur deserunt consectetur. Elit ipsum occaecat ut commodo tempor
+        proident voluptate.
+        Velit id in incididunt amet ad enim ullamco esse magna consequat minim consectetur esse ullamco. Occaecat cupidatat
+        incididunt commodo dolore id enim mollit sit magna. Proident enim pariatur voluptate aliquip est eu. Veniam proident
+        irure Lorem exercitation mollit. Est elit id ad ipsum aliqua et exercitation esse dolor.
+      </p>
+      <router-outlet></router-outlet>
+    </div>
+  </nb-layout-column>
+  <nb-layout-column class="column side-column end">
+
+  </nb-layout-column>
+
+</nb-layout>
