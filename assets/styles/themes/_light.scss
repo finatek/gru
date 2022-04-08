@@ -86,7 +86,15 @@ $nb-themes: nb-register-theme(
     color-danger-transparent-300: rgba(255, 77, 50, 0.24),
     color-danger-transparent-400: rgba(255, 77, 50, 0.32),
     color-danger-transparent-500: rgba(255, 77, 50, 0.4),
-    color-danger-transparent-600: rgba(255, 77, 50, 0.48)
+    color-danger-transparent-600: rgba(255, 77, 50, 0.48),
+
+    card-shadow: shadow,
+    card-border-width: 0,
+    card-border-radius: 1rem,
+
+    layout-height: calc(100vh - var(--header-height)),
+    layout-padding: 20px,
+    main-content-inner-height: calc(100vh - var(--header-height) - 2 * var(--layout-padding))
   ),
   light,
   default
