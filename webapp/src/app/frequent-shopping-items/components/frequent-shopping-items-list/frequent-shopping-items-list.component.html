@@ -1,0 +1,14 @@
+<div class="m-t-14 m-b-28">
+  <span class="h6">Frequent shopping items</span>
+</div>
+
+<nb-card *ngFor="let item of items">
+  <span class="subtitle">{{ item.name }}</span>
+  <span class="caption">{{ item.description }}</span>
+  <div class="m-t-14 d-flex flex-d-row space-between flex-end">
+    <span class="tag tag-small tag-primary tag-outline">{{ item.category }}</span>
+    <span class="text-hint bolder">{{ item.purchasePreferences?.quantity?.value + '' + item.purchasePreferences?.quantity?.unit }}</span>
+  </div>
+</nb-card>
+
+<app-empty *ngIf="noData" [emptyMessage]="'Empty list!'"></app-empty>

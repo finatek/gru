@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { NbMenuItem, NbSidebarService } from '@nebular/theme';
 
@@ -7,16 +7,8 @@ const SIDEBAR_TAG: string = 'sidebar-tag';
 
 const SIDEBAR_MENU_ITEMS: Array<NbMenuItem> = [
   {
-    title: 'Menu item 1',
-    link: '#'
-  },
-  {
-    title: 'Menu item 2',
-    link: '#'
-  },
-  {
-    title: 'Menu item 3',
-    link: '#'
+    title: 'Frequent shopping items',
+    link: '/app/frequent-shopping-items'
   }
 ];
 
@@ -25,7 +17,7 @@ const SIDEBAR_MENU_ITEMS: Array<NbMenuItem> = [
   templateUrl: './app-layout.component.html',
   styleUrls: [ './app-layout.component.scss' ]
 })
-export class AppLayoutComponent implements OnInit {
+export class AppLayoutComponent {
 
   sidebarTag: string = SIDEBAR_TAG;
 
@@ -35,9 +27,7 @@ export class AppLayoutComponent implements OnInit {
     private sidebarService: NbSidebarService
   ) { }
 
-  ngOnInit() { }
-
-  toggleSidebar() {
+  toggleSidebar(): void {
     this.sidebarService.toggle(false, this.sidebarTag);
   }
 

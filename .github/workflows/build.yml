@@ -22,6 +22,12 @@ jobs:
       working-directory: ./webapp
       run: npm install
 
+    - name: Setup environment variables
+      working-directory: ./webapp
+      run: |
+        echo "ENVIRONMENT = production" >> .env
+        echo "PRODUCTION = true" >> .env
+
     - name: Build
       working-directory: ./webapp
       run: npm run build -- --configuration=production
