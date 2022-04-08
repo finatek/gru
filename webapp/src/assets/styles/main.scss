@@ -8,4 +8,11 @@
   @include nb-theme-global();
 };
 
+@import 'base/animations';
+@import 'base/miscs';
+@import 'base/resets';
+
+@import 'components/card';
+@import 'components/tag';
+
 @import 'layouts/app-layout';

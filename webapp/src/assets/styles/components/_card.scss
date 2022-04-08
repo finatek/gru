@@ -1,0 +1,9 @@
+nb-card {
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+nb-card+nb-card {
+  margin-top: 20px;
+}
