@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: staging
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -24,7 +25,7 @@ jobs:
     - name: Setup environment variables
       working-directory: ./webapp
       run: |
-        echo "ENVIRONMENT = production" >> .env
+        echo "ENVIRONMENT = staging" >> .env
         echo "PRODUCTION = true" >> .env
         echo "FIREBASE_API_KEY = ${{ secrets.FIREBASE_API_KEY }}" >> .env
         echo "FIREBASE_AUTH_DOMAIN = ${{ secrets.FIREBASE_AUTH_DOMAIN }}" >> .env
@@ -35,7 +36,7 @@ jobs:
 
     - name: Build
       working-directory: ./webapp
-      run: npm run build -- --configuration=production --base-href=/gru/
+      run: npm run build -- --configuration=staging --base-href=/gru/
 
     - name: Setup 404 page
       working-directory: ./webapp/dist/webapp
